@@ -1,6 +1,6 @@
 {
-  "name": "@dashevo/dashd-rpc",
-  "description": "Dash Client Library to connect to Dash Core (dashd) via RPC",
+  "name": "dilithiumd-rpc",
+  "description": "Dilithium Client Library to connect to Dilithium Core (dilithiumd) via RPC",
   "version": "1.3.0",
   "author": {
     "name": "Stephen Pair",
@@ -26,15 +26,19 @@
     {
       "name": "Alex Werner",
       "email": "alex.werner@dash.org"
+    },
+    {
+      "name": "Riku Block",
+      "email": "riku.block@gmail.com"
     }
   ],
   "keywords": [
-    "dash",
+    "dilithium",
     "rpc"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashd-rpc"
+    "url": "https://github.com/dilithium-coin/dilithiumd-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -56,7 +60,7 @@
     "sinon": "^7.1.1"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashd-rpc/issues"
+    "url": "https://github.com/dilithium-coin/dilithiumd-rpc/issues"
   },
-  "homepage": "https://github.com/dashevo/dashd-rpc"
+  "homepage": "https://github.com/dilithium-coin/dilithiumd-rpc"
 }

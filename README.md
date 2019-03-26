@@ -1,17 +1,12 @@
-# dashd-rpc
+# dilithiumd-rpc
 
-[![Build Status](https://img.shields.io/travis/dashevo/dashd-rpc.svg?branch=master)](https://travis-ci.org/dashevo/dashd-rpc)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashd-rpc.svg)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
 
-> Dash Client Library to connect to Dash Core (dashd) via RPC
+> Dilithium Client Library to connect to Dilithium Core (dilithiumd) via RPC
 
 ## Install
 
-dashd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+dilithiumd-rpc runs on [node](http://nodejs.org/)
 
-```bash
-npm install @dashevo/dashd-rpc
-```
 
 ## Usage
 
@@ -23,12 +18,12 @@ Config parameters :
 	- user : (string - optional) - (default: 'user') - Set the user credential.
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
-	- port : (integer - optional) - (default: 9998) - Set the port on which perform the RPC command.
+	- port : (integer - optional) - (default: 8680) - Set the port on which perform the RPC command.
 
 Promise vs callback based
 
-  - `require('@dashevo/dashd-rpc/promise')` to have promises returned
-  - `require('@dashevo/dashd-rpc')` to have callback functions returned
+  - `require('dilithiumd-rpc/promise')` to have promises returned
+  - `require('dilithiumd-rpc')` to have callback functions returned
 	
 ### Examples
 
@@ -37,17 +32,17 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
-    pass: 'local321',
+    user: 'user',
+    pass: 'pass',
     host: '127.0.0.1',
-    port: 19998
+    port: 18680
 };
 ```
 
 Promise based:
 
 ```javascript
-var RpcClient = require('@dashevo/dashd-rpc/promise');
+var RpcClient = require('dilithiumd-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -68,8 +63,8 @@ Callback based (legacy):
 
 ```javascript
 var run = function() {
-  var bitcore = require('@dashevo/dashcore-lib');
-  var RpcClient = require('@dashevo/dashd-rpc');
+  var bitcore = require('dilithiumcore-lib');
+  var RpcClient = require('dilithiumd-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -115,13 +110,13 @@ var run = function() {
 You can dynamically access to the help of each method by doing
 
 ```
-const RpcClient = require('@dashevo/dashd-rpc');
+const RpcClient = require('dilithiumd-rpc');
 var client = new RPCclient({
     protocol:'http',
-    user: 'dash',
-    pass: 'local321', 
+    user: 'user',
+    pass: 'pass', 
     host: '127.0.0.1', 
-    port: 19998
+    port: 18680
 });
 
 var cb = function (err, data) {
@@ -137,7 +132,7 @@ client.help('getinfo',cb);
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/dashevo/dash-std-template/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/dilithium-coin/dash-std-template/issues/new) or submit PRs.
 
 ## License
 
